@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Entity
 @Data
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Payload implements Serializable {
 
     @Id
