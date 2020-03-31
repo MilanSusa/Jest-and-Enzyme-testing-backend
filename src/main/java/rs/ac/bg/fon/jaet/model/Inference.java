@@ -2,14 +2,15 @@ package rs.ac.bg.fon.jaet.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import rs.ac.bg.fon.jaet.model.compositekey.InferenceId;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Data
 @NoArgsConstructor
-public class Inference implements Serializable {
+@IdClass(InferenceId.class)
+public class Inference {
 
     @Id
     @GeneratedValue
