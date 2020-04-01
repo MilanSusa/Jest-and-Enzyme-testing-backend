@@ -9,7 +9,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class InferenceId implements Serializable {
+public class InferenceKey implements Serializable {
 
     private Long id;
     private Long person;

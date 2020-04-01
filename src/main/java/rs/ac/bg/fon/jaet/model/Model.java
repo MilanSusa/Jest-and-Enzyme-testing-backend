@@ -1,5 +1,6 @@
 package rs.ac.bg.fon.jaet.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

@@ -2,14 +2,14 @@ package rs.ac.bg.fon.jaet.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import rs.ac.bg.fon.jaet.model.compositekey.InferenceId;
+import rs.ac.bg.fon.jaet.model.compositekey.InferenceKey;
 
 import javax.persistence.*;
 
 @Entity
 @Data
 @NoArgsConstructor
-@IdClass(InferenceId.class)
+@IdClass(InferenceKey.class)
 public class Inference {
 
     @Id
