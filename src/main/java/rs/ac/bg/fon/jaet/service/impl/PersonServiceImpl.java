@@ -42,7 +42,7 @@ public class PersonServiceImpl implements PersonService {
         Optional<Person> optionalPerson = personRepository.findById(personId);
 
         if (optionalPerson.isEmpty()) {
-            throw new PersonDoesNotExistException("Person with given id doesn't exist");
+            throw new PersonDoesNotExistException("Person with given id doesn't exist.");
         }
 
         person.setId(optionalPerson.get().getId());

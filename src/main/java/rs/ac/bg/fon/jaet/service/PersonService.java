@@ -10,7 +10,7 @@ public interface PersonService {
 
     List<Person> findAll();
 
-    Person findById(Long id);
+    Person findById(Long personId);
 
     Person update(Person person, Long personId);
 
