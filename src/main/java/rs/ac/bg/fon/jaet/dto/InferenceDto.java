@@ -21,17 +21,18 @@ public class InferenceDto {
         id = inference.getId();
         person = inference.getPerson();
         model = inference.getModel();
+        payload = inference.getPayload();
         result = inference.getResult();
 
-        breakPersonCycle(person);
-        breakModelCycle(model);
+        breakPersonCycle();
+        breakModelCycle();
     }
 
-    private void breakPersonCycle(Person person) {
+    private void breakPersonCycle() {
         person.setInferences(null);
     }
 
-    private void breakModelCycle(Model model) {
+    private void breakModelCycle() {
         model.setInferences(null);
     }
 

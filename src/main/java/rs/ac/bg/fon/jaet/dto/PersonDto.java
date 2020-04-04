@@ -24,10 +24,10 @@ public class PersonDto {
         email = person.getEmail();
         inferences = person.getInferences();
 
-        breakInferencesCycle(inferences);
+        breakInferencesCycle();
     }
 
-    private void breakInferencesCycle(List<Inference> inferences) {
+    private void breakInferencesCycle() {
         inferences.forEach(inference -> {
             inference.setPerson(null);
             inference.getModel().setInferences(null);
