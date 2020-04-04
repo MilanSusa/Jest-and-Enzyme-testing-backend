@@ -1,8 +1,8 @@
 package rs.ac.bg.fon.jaet.model.compositekey;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import rs.ac.bg.fon.jaet.model.Model;
+import rs.ac.bg.fon.jaet.model.Person;
 
 import java.io.Serializable;
 
@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class InferenceKey implements Serializable {
 
     private Long id;
-    private Long person;
-    private Long model;
+    private Person person;
+    private Model model;
 
 }

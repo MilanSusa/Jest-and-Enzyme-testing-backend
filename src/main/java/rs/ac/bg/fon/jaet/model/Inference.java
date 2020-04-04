@@ -21,6 +21,8 @@ public class Inference {
     @Id
     @ManyToOne
     private Model model;
+    @OneToOne
+    private Payload payload;
     private String result;
 
 }
