@@ -81,7 +81,17 @@ public class InferenceServiceImpl implements InferenceService {
 
     @Override
     public void deleteById(Long inferenceId, Long modelId, Long personId) {
-        InferenceKey inferenceKey = new InferenceKey(inferenceId, modelId, personId);
+        Optional<Model> optionalModel = modelRepository.findById(modelId);
+        if (optionalModel.isEmpty()) {
+            throw new ModelDoesNotExistException("Model with given id doesn't exist.");
+        }
+
+        Optional<Person> optionalPerson = personRepository.findById(personId);
+        if (optionalPerson.isEmpty()) {
+            throw new PersonDoesNotExistException("Person with given id doesn't exist.");
+        }
+
+        InferenceKey inferenceKey = new InferenceKey(inferenceId, optionalPerson.get(), optionalModel.get());
         inferenceRepository.deleteById(inferenceKey);
     }
 
